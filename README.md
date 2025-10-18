@@ -53,7 +53,7 @@ AI Coaches run on public LLM platforms.
 Do **not** share any personal, private, or company-confidential data during sessions.
 These tools are designed for **education, exploration, and responsible experimentation** only.
 
-For more, see [`ETHICS.md`](ETHICS.md).
+For more, see [`Ethics and Safety`](./ethics-and-safety/).
 
 ### Getting Started
 
