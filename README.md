@@ -1,4 +1,4 @@
-## Root README: AI Coaching for API Design
+## AI Coaching for API Design
 
 ### Overview
 

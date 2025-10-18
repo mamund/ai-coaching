@@ -1,5 +1,16 @@
-## 🪶 **README: API Story Coach**
+## **README: API Story Coach**
 
+### Quickstart
+
+If you want to skip all the explanations and just run with it ...
+
+Load the `api-story-coach-context-kit` into your LLM chatbot (chatgpt, copilot, claude, gemini, etc.) and then type: `BEGIN: API Story Coaching Session`
+
+See the completed examples for more info:
+
+ * [task-management-api-story.md](task-management-api-story.md)
+ * [tool-shed-api-story.md](tool-shed-api-story.md)
+ 
 ### Purpose
 
 The **API Story Coach** helps you express your API as a *story* — a human-readable design artifact that describes what your API does, who it serves, and how it behaves.
