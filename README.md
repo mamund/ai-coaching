@@ -8,6 +8,8 @@ Every coach is a context kit. It is a self contained Markdown file that you can 
 
 The coaches follow the AI guided reasoning and exploration framework. They are built to support human decision making, not automate it. The tools help you find intention, surface constraints, and shape structure while keeping you in control of the design process.
 
+**NOTE** 
+> This is all very much a "work in progress." Expect things to change, bugs, and surprises. If you are trying thes out, I'd love to hear from you on what worked, what didn't and how I can improve things.  Fee free to leave an issue w/ details on contact me online. -- *MikeA*
 ---
 
 ## why ai coaching
