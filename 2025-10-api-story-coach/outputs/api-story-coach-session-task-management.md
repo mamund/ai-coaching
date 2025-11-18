@@ -76,6 +76,7 @@
 - `task-management-api-story.md` — Initial version with tables.  
 - `task-management-api-story-classic.md` — Classic format, no tables.  
 - `task-management-api-story-classic-bulleted.md` — Final validated format with proper bullet lists.  
+- `api-story-coach-context-kit-v1.1.md` — Updated Context Kit with formatting guidance and validation checklist.
 
 ---
 

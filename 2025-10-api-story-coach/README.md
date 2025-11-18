@@ -1,111 +1,133 @@
-## **README: API Story Coach**
+# API Story Coach v2.0
 
-### Quickstart
+**Version:** 2.0
+**Author:** Mike Amundsen
+**Maintainer:** Narrative First Labs
+**License:** CC BY NC SA 4.0
 
-If you want to skip all the explanations and just run with it ...
+---
 
-Load the `api-story-coach-context-kit` into your LLM chatbot (chatgpt, copilot, claude, gemini, etc.) and then type: `BEGIN: API Story Coaching Session`
+## overview
 
-See the completed examples for more info:
+The API Story Coach v2.0 is a teaching oriented instrument built inside the AI guided reasoning and exploration framework. It helps learners craft clear, concise API Stories using a structured, seven step workflow. These stories become the raw material for downstream tools such as ALPS, OpenAPI, AsyncAPI, and prototypes.
 
- * [task-management-api-story.md](task-management-api-story.md)
- * [tool-shed-api-story.md](tool-shed-api-story.md)
- 
-### Purpose
+This edition inherits the AI Coach Baseline Context Kit v2.0 and adds session start behavior hooks and runtime behavior rules. These features ensure the coach behaves consistently across multiple LLMs, including Claude, Gemini, and ChatGPT. The goal is predictability, not theatrics.
 
-The **API Story Coach** helps you express your API as a *story* — a human-readable design artifact that describes what your API does, who it serves, and how it behaves.
+API Stories offer a short, human readable description of purpose, data, resources, actions, and rules. The coach brings structure. The learner brings intent. The combination has a long lineage, echoing the way early scholars sketched concepts as stories before committing them to formal diagrams.
 
-It’s the **first step** in the AI Coaching ecosystem and serves as the foundation for later conversions (ALPS, OpenAPI, JSON Schema, etc.).
+---
 
-> Think of it as *screenwriting for APIs*: you describe scenes, characters, and actions — the coach turns them into design artifacts.
+## purpose
 
-### What You’ll Learn
+This project exists to support the design and teaching of API Stories. It provides:
 
-* How to express **Purpose**, **Data**, **Resources**, **Actions**, and **Rules** clearly
-* How to structure an API design conversation around *intent* and *outcomes*
-* How to generate your first **API Story** document in Markdown or YAML
-* How to move from story → specification → implementation
+* a complete context kit describing the philosophy and workflow
+* a portable coach that yields stable results across models
+* a classic output format that is easy to read and easy to transform
+* a canonical example (Task Management) for classroom and workshop use
 
-### How to Use It
+If you want to help others learn how to shape APIs through narrative rather than guesswork, this coach gives you a place to start.
 
-1. Open ChatGPT (or another AI platform).
-2. Paste the contents of `api-story-coach-context-kit.md` into a new chat.
-3. Type the trigger:
+---
 
-   ```
-   BEGIN: API Story Coaching Session
-   ```
-4. Follow the guided prompts.
-   The coach will ask about your API’s purpose, actors, resources, and actions.
-5. When finished, the coach will output an **API Story document** — ready to use as the foundation for ALPS, OpenAPI, and beyond.
+## features
 
-### Example Session
+The API Story Coach v2.0 includes:
 
-**You:**
+* full alignment with the AI coach baseline context kit v2.0
+* session start behavior hooks that guide the model into the workflow
+* runtime behavior rules that prevent drift and preserve structure
+* no invention safeguards
+* a deterministic output sequence
+* cross model neutrality for predictable behavior
+* a teaching oriented tone
+* classic Markdown output style
+* the complete Task Management example
 
-> BEGIN: API Story Coaching Session
+---
 
-**Coach:**
+## the classic api story workflow
 
-> Great! Let’s start by defining your API’s purpose.
-> What problem does it solve, and who benefits from it?
+API Stories follow a simple seven step path.
 
-**You:**
+1. Purpose
+2. Data properties
+3. Resources
+4. Actions
+   4b. Action details (optional)
+5. Associate actions with resources
+6. Rules
+7. Validation summary
 
-> A tool-sharing app that lets neighbors lend tools to each other.
+The coach guides learners through each step using clear, stable prompts that are friendly to any LLM.
 
-**Coach:**
+---
 
-> Perfect — that’s the *Tool Shed Sharing Program*.
-> Let’s list the main resources (e.g., Tool, Member, BorrowRequest)...
+## cross model behavior
 
-…and so on.
+To support reliable execution across Claude, Gemini, ChatGPT, and other models, the coach defines:
 
-The session concludes with a generated Markdown file like:
+* a required session start pattern
+* a strict no invention rule
+* a step discipline rule
+* a format preservation rule
+* a deterministic output pattern
+* a model lifetime rule allowing smooth continuation if a session resets
 
-```markdown
-# API Story: Tool Shed Sharing Program
+These guards ensure the coach behaves like a tool rather than a performer.
 
-## Purpose
-Help neighbors lend and borrow tools within a local community.
+---
 
-## Resources
-- Tool
-- Member
-- BorrowRequest
+## example included
 
-## Actions
-- addTool 
-- borrowTool 
-- returnTool 
-- removeMember 
-```
+The repository includes the full Task Management API Story as the canonical example. It shows every section, every list, and a complete Validation Summary. This example is used in workshops and live instruction.
 
-### Outputs
+---
 
-| Type                    | Format          | Description                               |
-| ----------------------- | --------------- | ----------------------------------------- |
-| Story                   | Markdown / YAML | Human-readable API Story                  |
-| ALPS Profile (pending) | JSON / XML      | Affordance model generated from the story |
-| OpenAPI Spec (pending) | YAML            | Derived API specification                 |
+## how to use the coach
 
-### Best Practices
+1. Load the API Story Coach v2.0 context kit into your preferred LLM.
+2. Begin a session by stating that you want to create an API Story.
+3. The coach will run the session start behavior sequence and wait for confirmation.
+4. Proceed through the seven steps.
+5. Review the Validation Summary.
+6. Convert the story into ALPS or OpenAPI using your preferred tooling.
 
-* Start small — describe one flow or user story first.
-* Keep actions **verb-based** (`addTool`, `returnBook`, `updateStatus`).
-* Use consistent naming for resources and actions.
-* Let the coach handle formatting — focus on clarity and purpose.
+If a session resets or the model loses context, the coach includes hooks to re establish state.
 
-### Next Steps
+---
 
-After creating your API Story:
+## recommended teaching flow
 
-* Use the **Vocabulary Coach** to align your property names.
-* Use the **JSON Schema Coach** to formalize your data models.
-* Use the **Diagramming Coach** to visualize your API graph.
+A simple but effective approach:
 
-### Attribution
+* introduce the idea of API Stories and their historical lineage
+* walk through the example provided
+* have learners draft their own stories
+* refine the work together
+* show how stories transform into specifications and prototypes
 
-Developed by **Mike Amundsen** as part of the *AI-Driven API Design* project.
-Inspired by *Narrative-First Design*, *Hypermedia-Oriented Architecture*, and *AI-Augmented Creativity*.
+This mirrors the classic pattern of demonstration, guided practice, and reflection.
 
+---
+
+## repository contents
+
+* `api-story-coach-context-kit-v2.0.md`
+  The complete context kit for this coach.
+
+* `ai-coach-baseline-context-kit-v2.0.md`
+  The universal baseline that all coaches inherit.
+
+* `README.md`
+  This file.
+
+Additional teaching materials or producer oriented editions can be added as the project grows.
+
+---
+
+## provenance
+
+This project is part of the Narrative First AI coaching ecosystem. It is grounded in the long tradition of treating tools as partners in thought, not replacements for the human role in design.
+
+© 2025 amundsen.com, Inc. CC BY NC SA 4.0
