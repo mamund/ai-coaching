@@ -98,3 +98,7 @@ BEGIN: API Story Coaching Session
 ```
 
 The coach will take you through each step at a manageable pace and help you produce a complete, validated artifact.
+
+*NOTE*
+> Each coach is designed to operate as a stand-alone element. You do not need to load any other context data to start a coaching session. In some cases, the coach might give yuou the opportunity to share input data (an ALPS profile document, a list of vocabulary words, etc.). As usual, be careful on what you share with a pulbic LLM.
+> 
