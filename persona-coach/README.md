@@ -1,4 +1,4 @@
-# 🧭 Persona Coach — Context Kit README (v1.2)  
+# Persona Coach — Context Kit README (v1.2)  
 **Part of the Narrative-First AI-Coaching Framework**  
 **Author:** Mike Amundsen  
 **Status:** Integrated + Example Edition  
@@ -6,7 +6,7 @@
 
 ---
 
-## 📘 Overview
+## Overview
 
 The **Persona Coach** helps teams build empathy-driven, narrative personas that represent the humans interacting with their APIs, products, or systems.  
 It belongs to the *Human-Side* collection of coaches and now includes a **complete working example — the Tool Shed Sharing Program** — illustrating a full session from purpose to design implications.
@@ -16,7 +16,7 @@ Instead, it clarifies *who* your system serves, *why* they care, and *how* their
 
 ---
 
-## ⚙️ How to Use
+## How to Use
 
 1. **Open the Coach Context Kit**  
    Read or run `persona-coach-context-kit-v1.2.md` inside your AI-Coaching environment.
@@ -46,7 +46,7 @@ Instead, it clarifies *who* your system serves, *why* they care, and *how* their
 
 ---
 
-## 🧩 Relationship to Other Coaches
+## Relationship to Other Coaches
 
 | Coach | Role | Output Link |
 |--------|------|--------------|
@@ -58,7 +58,7 @@ The Persona Coach provides the **human input** for these later design stages.
 
 ---
 
-## ⚖️ Ethics & Safety Reminder
+## Ethics & Safety Reminder
 
 - Use fictional or archetypal personas — **never real people.**  
 - Avoid demographic profiling or private data.  
@@ -70,7 +70,7 @@ Full baseline and ethics text are integrated directly in the context kit.
 
 ---
 
-## 🧭 Coach’s Commentary
+## Coach’s Commentary
 
 Personas transform assumptions into awareness.  
 They keep technical design grounded in empathy, ensuring APIs and systems serve real human needs.  
@@ -78,21 +78,7 @@ This updated version embeds a full working example so you can learn by imitation
 
 ---
 
-## 🗂 File List
-
-```
-persona-coach/
-│
-├── README.md                               # This file
-├── persona-coach-context-kit-v1.2.md       # Main coach + embedded example
-├── ai-coaching-baseline-and-ethics.md      # Shared baseline + ethics source
-├── persona-template.json                   # Optional structured template
-└── persona-coach-example-toolshed-v1.0.md  # (Deprecated; content now embedded)
-```
-
----
-
-## 📜 License & Attribution
+## License & Attribution
 
 © 2025 Amundsen Consulting — Narrative-First AI-Coaching Framework  
 Released under **CC BY-NC-SA 4.0** License.  
