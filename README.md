@@ -1,5 +1,7 @@
 # AI coaching for API design
 
+![image](logo.png)
+
 ## overview
 
 This repository hosts a growing collection of AI coaches. Each coach is an interactive, in chat assistant that helps developers, designers, and architects think more clearly about API design using narrative first reasoning, structured exploration, and affordance aware techniques.
