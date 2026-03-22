@@ -31,6 +31,8 @@ Entry point listing available affordances or navigation links.
 - showHome — View the entry point of the API.
 - viewTasks — Retrieve a list of all tasks.
 
+**AllowedRoles**: admin, user, anon
+
 ---
 
 ### tasks
@@ -42,6 +44,8 @@ Collection of all tasks owned or visible to the user.
 - addTask — Create a new task.
 - viewTask — Retrieve details of a specific task.
 
+**AllowedRoles**: admin, user
+
 ---
 
 ### task
@@ -51,11 +55,13 @@ A single task, identified by its ID.
 - showHome — View the entry point of the API.
 - viewTask — Retrieve details of a specific task.
 - updateTask — Modify an existing task.
-- updateStatus — Change the status of an existing task.
-- updateDueDate — Modify the due date of an existing task.
-- updatePriority — Modify the priority of an existing task.
+- setStatus — Change the status of an existing task.
+- setDueDate — Modify the due date of an existing task.
+- setPriority — Modify the priority of an existing task.
 - removeTask — Delete an existing task.
 - viewTasks — Retrieve a list of all tasks.
+
+**AllowedRoles**: admin, user
 
 ---
 
@@ -67,6 +73,7 @@ A single task, identified by its ID.
   - Target Resource: home  
   - Returns: home  
   - Input Properties: none
+  - AllowedRoles : admin, user, anon
 
 - **viewTasks**  
   - Type: view  
@@ -74,6 +81,7 @@ A single task, identified by its ID.
   - Target Resource: tasks  
   - Returns: tasks  
   - Input Properties: none
+  - AllowedRoles : admin, user  
 
 - **viewTask**  
   - Type: view  
@@ -82,6 +90,7 @@ A single task, identified by its ID.
   - Returns: task  
   - Input Properties:  
     - id (required)
+  - AllowedRoles : admin, user
 
 - **addTask**  
   - Type: add  
@@ -95,6 +104,7 @@ A single task, identified by its ID.
     - priority (required)  
     - dueDate (required)  
     - assignee (optional)
+  - AllowedRoles : admin, user  
 
 - **updateTask**  
   - Type: update  
@@ -104,8 +114,9 @@ A single task, identified by its ID.
   - Input Properties:  
     - id (required)  
     - Any subset of: title, description, status, priority, dueDate, assignee (optional)
+  - AllowedRoles : admin, user  
 
-- **updateStatus**  
+- **setStatus**  
   - Type: update  
   - Description: Change the status of an existing task.  
   - Target Resource: task  
@@ -113,8 +124,9 @@ A single task, identified by its ID.
   - Input Properties:  
     - id (required)  
     - status (required)
+  - AllowedRoles : admin, user  
 
-- **updateDueDate**  
+- **setDueDate**  
   - Type: update  
   - Description: Modify the due date of an existing task.  
   - Target Resource: task  
@@ -122,8 +134,9 @@ A single task, identified by its ID.
   - Input Properties:  
     - id (required)  
     - dueDate (required)
+  - AllowedRoles : admin, user  
 
-- **updatePriority**  
+- **setPriority**  
   - Type: update  
   - Description: Modify the priority of an existing task.  
   - Target Resource: task  
@@ -131,6 +144,7 @@ A single task, identified by its ID.
   - Input Properties:  
     - id (required)  
     - priority (required)
+  - AllowedRoles : admin, user  
 
 - **removeTask**  
   - Type: delete  
@@ -139,20 +153,23 @@ A single task, identified by its ID.
   - Returns: tasks  
   - Input Properties:  
     - id (required)
+  - AllowedRoles : admin  
 
 ---
+
+## Roles
+- **anon** : anonymous user (not logged in)
+- **user** : identified user (logged in)
+- **admin** : administrative user (logged in)
 
 ## Rules
-- ValidStatusValues — A task’s status must be one of: pending, in-progress, or completed.
-- DueDateNotPast — A task’s due date cannot be set to a date earlier than today.
-- RequiredTitle — A task must have a non-empty title.
-- PriorityRange — A task’s priority must be one of: low, medium, or high.
-- RequiredDescription — A task must include a non-empty description.
-- RequiredStatus — A task must include a valid status value.
-- RequiredPriority — A task must include a valid priority value.
-- RequiredDueDate — A task must include a valid due date value.
 
----
+- id MUST BE UNIQUE
+- status MUST BE ONE OF: pending, in-progress, completed
+- dueDate MUST NOT BE IN THE PAST
+- title MUST NOT BE EMPTY
+- description MUST NOT BE EMPTY
+- priority MUST BE ONE OF: low, medium, high
 
 **Validation Summary:** PASS  
 This API Story conforms to the Classic API Story format and is ready for conversion to ALPS, OpenAPI, JSON Schema, or GraphQL.
