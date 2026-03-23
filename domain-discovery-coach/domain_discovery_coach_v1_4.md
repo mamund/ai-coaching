@@ -393,11 +393,6 @@ sequence.
 Contextual Inquiry is a research method used in user-centered design
 that emphasizes observing real work in its natural context.
 
-**Ethnographic Field Notes**\
-Ethnographic methods emphasize recording events, interactions, and
-artifacts to understand how systems operate in practice rather than
-theory.
-
 This coach adapts these traditions by focusing on four observable 
 elements: events, actors, artifacts, and signals.
 
